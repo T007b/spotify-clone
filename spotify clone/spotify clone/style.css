@@ -1,0 +1,198 @@
+  @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&family=Varela+Round&display=swap');
+
+  body {
+      background-color: rgb(200, 192, 182);
+  }
+
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+
+
+  nav {
+      position: sticky;
+      top: 0;
+      z-index: 222;
+      font-family: 'Ubuntu', sans-serif;
+  }
+
+  nav ul {
+      display: flex;
+      align-items: center;
+      list-style-type: none;
+      height: 47px;
+      background-color: rgb(1, 1, 1);
+      color: wheat;
+    overflow: auto;
+  }
+
+  nav ul li {
+      padding: 4px 8px;
+  }
+
+  nav ul li:hover {
+      background-color: rgb(126, 135, 143);
+      border-radius: 20px;
+      cursor: pointer;
+
+  }
+
+  .brand img {
+
+      width: 52px;
+      padding: 1px 9px;
+
+  }
+
+  .brand {
+      display: flex;
+      align-items: center;
+      font-weight: bolder;
+      font-size: 1.rem;
+  }
+
+  .container {
+      min-height: 95vh;
+      color: white;
+      font-family: 'Varela Round', sans-serif;
+      display: flex;
+      width: 75vw;
+      margin: 11px auto 9px;
+      border-radius: 12px;
+      position: relative;
+      padding: 27px;
+  }
+
+  
+  .container::before {
+
+      content: "";
+      color: rgb(80, 24, 148);
+      background: url(music.jpeg) no-repeat center center/cover;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      height: 100%;
+      width: 100%;
+      z-index: -1;
+  }
+
+  .bottom {
+      color: wheat;
+      position: sticky;
+      bottom: 0;
+      height: 99px;
+      background-color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+  }
+
+  #progress {
+      width: 80vw;
+      cursor: pointer;
+
+  }
+
+  .icons {
+      margin: 12px 0px;
+      cursor: pointer;
+  }
+
+  .songitem {
+      height: 50px;
+      display: flex;
+      background-color: rgb(231, 221, 206);
+      color: black;
+      margin: 5px 0px;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 30px;
+    
+
+
+  }
+
+  .songitem img {
+      width: 45px;
+      margin: 0px 33px;
+      border-radius: 25px;
+  }
+
+  .timestamp {
+      margin: 0px 30px;
+  }
+  .timestamp  i {
+     cursor: pointer;
+}
+.songbox{
+    margin-top: 50px ;
+}
+.songinfo{
+    position: absolute;
+    left :11vw;
+    font-family: 'Varela Round', sans-serif;
+ 
+}
+.songinfo img{
+   opacity: 0;
+   transition: opacity 0.5s  ease-in;
+   
+}
+.songlistplay{
+    display: flex;
+
+}
+
+@media only screen and (max-width: 900px) {
+    body {
+      background-color: rgb(109, 94, 94);
+    }
+   
+  }
+  @media only screen and (max-width: 417px) {
+   body{
+    background-color: rgb(97, 97, 110);
+   }
+   .songitem{
+   width: 66vw;
+   margin: 0px -12px;
+   overflow: scroll;
+   }
+   .timestamp{
+    display: flex;
+
+   }
+  }
+  @media only screen and (max-width: 260px){
+    .bottom{
+        width: 260px;
+    }
+   .songlist{
+    height: 700px;
+   }
+    nav ul{
+        
+        width: 260px;
+     
+    }
+  }
+  @media only screen and (max-width: 590px){
+.songinfo {
+    bottom: 0vw;
+}
+  }
+  @media only screen and (max-width: 270px){
+    .container{
+        width: 250px;
+        margin-top: 30px;
+       
+    }
+    .bottom{
+        width: 400px;
+        position: fixed;
+    }
+  }
